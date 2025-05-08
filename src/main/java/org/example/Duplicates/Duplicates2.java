@@ -1,25 +1,24 @@
 package org.example.Duplicates;
 
 public class Duplicates2 {
-    public static boolean findDuplicates(int[] array) {
+    public static boolean hasDuplicates(int[] array) {
         int max = array[0];
-        for (int i = 0; i < array.length; i++) {
-            if(array[i] > max) {
-                max = array[i];
+        for(int num : array) {
+            if(num > max) {
+                max = num;
             }
         }
 
-        int[] existingNumbers = new int[max + 1];
+        int[] existingNumber = new int[max+1];
 
         for(int i = 0; i < array.length; i++) {
-            if(existingNumbers[array[i]] == 1) {
+            if(existingNumber[array[i]] == 1) {
                 return true;
             } else {
-                existingNumbers[array[i]] = 1;
+                existingNumber[array[i]] = 1;
             }
         }
         return false;
-
     }
 
 }

@@ -2,7 +2,6 @@ package org.example.Duplicates;
 
 public class Duplicates {
 
-  //  {1, 2, 1, 43, 76, 2}
     public static boolean hasDuplicatedValues(int[] array) {
         int steps = 0;
         for(int i = 0; i < array.length; i++) {
